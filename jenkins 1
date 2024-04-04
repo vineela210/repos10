@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+    stages {
+        stage ('hii hello') {
+            steps {
+                echo "hello world"
+            }
+        }
+    }
+    post {
+        always {
+            echo "this is post build actions in always section"
+        }
+    }
+}
